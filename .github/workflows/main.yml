@@ -67,9 +67,9 @@ jobs:
    # - name: Download File for Analysis
    #   run: |
      #   gdown --fuzzy -O ${{ github.event.inputs.target_file }} ${{ github.event.inputs.file_link }}
-     - name: Download File for Analysis
-     run: |
-    pipx run gdown --fuzzy -O ${{ github.event.inputs.target_file }} ${{ github.event.inputs.file_link }}
+    - name: Download File for Analysis
+      run: |
+         pipx run gdown --fuzzy -O ${{ github.event.inputs.target_file }} ${{ github.event.inputs.file_link }}
 
     - name: Run IDA Pro Headless Analysis
       run: |
