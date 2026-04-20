@@ -64,9 +64,12 @@ jobs:
         python3 $HOME/idapro-9.0/idalib/python/py-activate-idalib.py
         python3 ida90_eula.py
 
-    - name: Download File for Analysis
-      run: |
-        gdown --fuzzy -O ${{ github.event.inputs.target_file }} ${{ github.event.inputs.file_link }}
+   # - name: Download File for Analysis
+   #   run: |
+     #   gdown --fuzzy -O ${{ github.event.inputs.target_file }} ${{ github.event.inputs.file_link }}
+     - name: Download File for Analysis
+     run: |
+    pipx run gdown --fuzzy -O ${{ github.event.inputs.target_file }} ${{ github.event.inputs.file_link }}
 
     - name: Run IDA Pro Headless Analysis
       run: |
